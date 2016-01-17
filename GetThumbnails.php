@@ -41,7 +41,7 @@ class Get_Thumbnails
 	private function getImagesByPageUrl($pageURL)
 	{
 		$imageUrlArray =	array();
-		$finalPageUrl = 	$this->cURL($pageURL)['finalPageUrl'];
+		$finalPageUrl =		$this->cURL($pageURL)['finalPageUrl'];
 		$curlResponse = 	$this->cURL('http://api.embed.ly/1/extract?key=' . 
 							$this->embedlyPrivateKey . 
 							'&url=' . urlencode($finalPageUrl));
